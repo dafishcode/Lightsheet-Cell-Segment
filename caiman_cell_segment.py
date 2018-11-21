@@ -39,6 +39,7 @@ Fshort = Fmvct + os.sep + 'Test'
 Fthis   = Fshort
 tifs    = []
 ftifs   = os.listdir(Fthis)
+print("I found " + str(len(ftifs)) + " files in total")
 r       = re.compile('^.*[tif|tiff]$')
 ftifs   = list(filter(r.match, ftifs))
 for ff in ftifs: tifs.append(os.path.join(Fthis, ff))
